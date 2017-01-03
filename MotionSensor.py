@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(14, GPIO.OUT)
@@ -10,6 +11,7 @@ try:
             GPIO.output(14, True)
             print alert
             alert = alert + 1
+            time.sleep(1)
         
 except KeyboardInterrupt:
     print " Quit "
