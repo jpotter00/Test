@@ -6,13 +6,10 @@ GPIO.setup(4,GPIO.IN)
 
 alert = 1
 try:
-    while True:
-        if GPIO.input(4):
+    while GPIO.input(4)== True:
             GPIO.output(14, True)
             print alert
             alert = alert + 1
-        else:
-            GPIO.output(14, False)
         
 except KeyboardInterrupt:
     print " Quit "
