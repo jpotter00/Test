@@ -10,7 +10,7 @@ try:
     while True:
        if GPIO.input(4):
             GPIO.output(14, True)
-            print "alert " + alert
+            print "alert number {}".format(alert)
             alert = alert + 1
             time.sleep(.25)
        else:
