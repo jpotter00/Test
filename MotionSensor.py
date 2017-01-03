@@ -10,7 +10,7 @@ while True:
     if pir.motion_detected:
         GPIO.output(14, True)
         print alert
-        alert ++
+        alert = alert + 1
     else:
         GPIO.output(14, False)
         
