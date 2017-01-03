@@ -7,13 +7,14 @@ GPIO.setup(4,GPIO.IN)
 
 alert = 1
 try:
-    while GPIO.input(4) == True:
+    while True:
+       if GPIO.input(4):
             GPIO.output(14, True)
             print alert
             alert = alert + 1
             time.sleep(1)
-    while GPIO.input(4) == False:
-            GPIO.output(14, False)
+       else:
+           GPIO.output(14,False)
         
 except KeyboardInterrupt:
     print " Quit "
