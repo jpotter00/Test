@@ -13,3 +13,6 @@ while True:
     else:
         GPIO.output(14, False)
         
+except KeyboardInterrupt:
+    print " Quit "
+    GPIO.cleanup()
