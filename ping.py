@@ -6,10 +6,13 @@ GPIO.setup(14,GPIO.OUT)
 
 ip = input("Input IP")
 GPIO.output(14, True)
+
+
 try:
     while True:
         if GPIO.input(4):
             ping ip -l 65527
+            print "pinging " + ip
             
             
     
